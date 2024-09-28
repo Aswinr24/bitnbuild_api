@@ -24,6 +24,13 @@ const clothSchema = new mongoose.Schema({
     ],
     default: "new",
   },
+  usedFrom: { type: String },
+  seasonalUse: {
+    type: [String],
+    enum: ["winter", "summer", "spring", "autumn"],
+    default: [],
+  },
+  imageURL: { type: String },
 });
 
 const Clothes = mongoose.model("Clothes", clothSchema);

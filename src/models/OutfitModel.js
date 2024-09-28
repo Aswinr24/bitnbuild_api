@@ -10,7 +10,7 @@ const outfitSchema = new mongoose.Schema({
   accessoryItems: [
     { type: mongoose.Schema.Types.ObjectId, ref: "Accessories" },
   ],
-  occassion: { type: String, required: true },
+  occasion: { type: String },
   notes: { type: String, default: "" },
 });
 

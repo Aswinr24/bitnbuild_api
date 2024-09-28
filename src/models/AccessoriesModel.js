@@ -13,11 +13,13 @@ const accessorySchema = new mongoose.Schema({
   brand: { type: String, required: true },
   material: { type: String },
   status: { type: String, enum: ["new", "used"], default: "new" },
+  usedFrom: { type: String },
   seasonalUse: {
     type: [String],
     enum: ["winter", "summer", "spring", "autumn"],
     default: [],
   },
+  imageURL: { type: String },
 });
 
 const Accessories = mongoose.model("Accessories", accessorySchema);

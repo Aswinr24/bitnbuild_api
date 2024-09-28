@@ -1,6 +1,7 @@
-import { Outfits } from "../models/outfit.js";
-import { Clothes } from "../models/clothes.js";
-import { Accessories } from "../models/accessories.js";
+import { Outfits } from "../models/OutfitModel.js";
+import { Clothes } from "../models/ClothesModel.js";
+import { Accessories } from "../models/AccessoriesModel.js";
+import axios from "axios";
 
 export const addOutfit = async (req, res) => {
   const { userId, outfitItems, accessoryItems, occasion, notes } = req.body;
@@ -46,7 +47,7 @@ export const addOutfit = async (req, res) => {
 };
 
 export const getOutfits = async (req, res) => {
-  const { userId } = req.params;
+  const { userId } = req.body;
 
   try {
     const outfits = await Outfits.find({ userId })

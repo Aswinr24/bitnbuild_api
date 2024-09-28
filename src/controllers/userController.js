@@ -5,6 +5,7 @@ export const registerUser = async (req, res) => {
   const {
     name,
     email,
+    gender,
     password,
     favouriteColors,
     favouriteBrands,
@@ -23,6 +24,7 @@ export const registerUser = async (req, res) => {
     const newUser = new Users({
       name,
       email,
+      gender,
       password: hashedPassword,
       favouriteColors,
       favouriteBrands,

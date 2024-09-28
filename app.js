@@ -1,12 +1,12 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import { connectToDatabase } from "./services/dbConnect.js";
-import userRoutes from "./routes/userRoutes.js";
-import clothesRoutes from "./routes/clothesRoutes.js";
-import outfitRoutes from "./routes/outfitRoutes.js";
-import accessoriesRoutes from "./routes/accessoriesRoutes.js";
-import recommendationRoutes from "./routes/recommendationRoutes.js";
+import { connectToDatabase } from "./src/services/dbConnect.js";
+import userRoutes from "./src/routes/userRoutes.js";
+import clothesRoutes from "./src/routes/clothesRoutes.js";
+import outfitRoutes from "./src/routes/outfitRoutes.js";
+import accessoriesRoutes from "./src/routes/accessoriesRoutes.js";
+import recommendationRoutes from "./src/routes/recommendationRoutes.js";
 
 dotenv.config();
 
